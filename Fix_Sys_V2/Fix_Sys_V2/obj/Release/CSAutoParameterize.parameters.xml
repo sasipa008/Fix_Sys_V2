@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="Fix_Sys_V2Context-Web.config Connection String" description="Fix_Sys_V2Context Connection String used in web.config by the application to access the database." defaultValue="Server=tcp:fixing.database.windows.net,1433;Initial Catalog=fixsys;Persist Security Info=False;User ID=sasipa;Password=sasi1150.;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\5730213008\\Desktop\\Fix_Sys_V2\\Fix_Sys_V2\\Fix_Sys_V2\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Fix_Sys_V2Context']/@connectionString" />
+  </parameter>
+</parameters>

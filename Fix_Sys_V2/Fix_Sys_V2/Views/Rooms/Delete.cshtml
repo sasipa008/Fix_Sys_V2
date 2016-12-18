@@ -1,0 +1,48 @@
+﻿@model Fix_Sys_V2.Models.Room
+
+@{
+    ViewBag.Title = "ลบรายการ";
+}
+
+<h2>ลบห้อง</h2>
+
+<h3>คุณแน่ใจไหมว่าคุณต้องการลบรายการนี้</h3>
+<div>
+    <h4>ลบห้อม</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Build)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Build)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RoomNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RoomNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Floor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Floor)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="ลบ" class="btn btn-default" /> |
+            @Html.ActionLink("กลับสู่หน้าหลัก", "Index")
+        </div>
+    }
+</div>

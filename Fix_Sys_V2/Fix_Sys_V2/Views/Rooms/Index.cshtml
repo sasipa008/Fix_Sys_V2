@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Fix_Sys_V2.Models.Room>
+
+@{
+    ViewBag.Title = "ห้อง";
+}
+
+<h2>ห้อง</h2>
+
+<p>
+    @Html.ActionLink("เพิ่มห้อง", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Build)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RoomNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Floor)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Build)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RoomNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Floor)
+        </td>
+        <td>
+            @Html.ActionLink("แก้ไข", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("รายละเอียด", "Details", new { id=item.ID }) |
+            @Html.ActionLink("ลบ", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
